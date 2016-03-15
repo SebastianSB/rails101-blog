@@ -1,0 +1,8 @@
+<h1>Posts</h1>
+    <%- @posts.each do |post| %>
+        <h4><%= post.title %></h4>
+        <p><%= post.summary %></p>
+        <%- post.comments.each do |comment| %>
+            <p><%= comment.comment_text %></p>
+        <% end %>
+    <% end %>
